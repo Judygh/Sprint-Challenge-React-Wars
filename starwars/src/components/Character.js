@@ -33,7 +33,7 @@ const P = styled.p`
 
 const H = styled.h2`
   color: white;
-  font-size: 2rem;
+  font-size: 1,5rem;
   margin:auto;
 `;
 
@@ -42,7 +42,7 @@ const Character = (props) => {
     <Col sm="6" sm="6" md="4" xl="3">
       <Card>
         <H>{props.name}</H>
-        <CharacterImg top width="10%" src={props.img} alt="Characters" />
+        <CharacterImg src={props.img} alt="Characters" />
         <P>Gender: {props.gender}</P>
         <P>Status: {props.status}</P>
         <P>Species: {props.species}</P>

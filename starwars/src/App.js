@@ -49,7 +49,6 @@ import "./App.css";
 import axios from "axios";
 import Character from "../src/components/Character";
 import styled from "styled-components";
-
 import Container from "reactstrap/lib/Container";
 
 const H = styled.h1`
@@ -59,14 +58,13 @@ const H = styled.h1`
 
 const App = () => {
   const [characters, setCharacters] = useState([]);
-  // const [isHappy, setIsHappy]= useState(true);
   console.log("Characters", characters[0]);
 
   useEffect(() => {
     axios
       .get(`https://rickandmortyapi.com/api/character/`)
       .then((res) => setCharacters(res.data.results))
-      .catch((err) => console.log("Nope", err));
+      .catch((err) => console.log("Something is wrong!!!", err));
   }, []);
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
