@@ -6,12 +6,14 @@ import { Container, Row, Col } from "reactstrap";
 const Card = styled.div`
   background: #202429;
   margin: auto;
+  padding:auto;
   width: 400px;
   display: flex;
   flex-direction: column;
   align-item: center;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 20px;
+  radios:5px;
   
 `;
 
@@ -32,6 +34,7 @@ const P = styled.p`
 const H = styled.h2`
   color: white;
   font-size: 2rem;
+  margin:auto;
 `;
 
 const Character = (props) => {

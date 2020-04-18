@@ -54,7 +54,7 @@ import Container from "reactstrap/lib/Container";
 
 const H = styled.h1`
   font-size: 4rem;
-  color: white;
+  color: #202429;
 `;
 
 const App = () => {
