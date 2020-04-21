@@ -1,53 +1,52 @@
 // Write your Character component here
 import React from "react";
 import styled from "styled-components";
-import { Container, Row, Col } from "reactstrap";
 
 const Card = styled.div`
-  background: #202429;
+  background: #333333;
   margin: auto;
-  padding:auto;
-  width: 400px;
+  padding: auto;
+  width: 300px;
+  height: 500px;
   display: flex;
   flex-direction: column;
   align-item: center;
   justify-content: space-around;
   margin-bottom: 20px;
-  radios:5px;
-  
+  border-radius: 5px;
 `;
 
 const CharacterImg = styled.img`
-  width: 200px;
+  width: 300px;
   height: 200px;
   object-fit: scale;
-  margin: auto;
+  border-radius: 5px;
 `;
 
 const P = styled.p`
   color: white;
   display: flex;
+  justify-content: space-between;
   align-text: left;
-  margin:auto;
+  margin: auto;
 `;
 
 const H = styled.h2`
   color: white;
-  font-size: 1,5rem;
-  margin:auto;
+  margin: auto;
+  align-text: center;
+  font-size: 1, 5rem;
 `;
 
 const Character = (props) => {
   return (
-    <Col sm="6" sm="6" md="4" xl="3">
-      <Card>
-        <H>{props.name}</H>
-        <CharacterImg src={props.img} alt="Characters" />
-        <P>Gender: {props.gender}</P>
-        <P>Status: {props.status}</P>
-        <P>Species: {props.species}</P>
-      </Card>
-    </Col>
+    <Card>
+      <CharacterImg src={props.img} alt="Characters" />
+      <H>{props.name}</H>
+      <P>Gender: {props.gender}</P>
+      <P>Status: {props.status}</P>
+      <P>Species: {props.species}</P>
+    </Card>
   );
 };
 
